@@ -10,7 +10,7 @@ set ( CMAKE_CXX_EXTENSIONS        OFF )
 set(SRC_FILES
  "src/main.cpp"
  "src/vec3.h"
- "src/color.h" "src/ray.h")
+ "src/color.h" "src/ray.h" )
 
 
 # ------------------- COMPILER FLAGS -------------------
