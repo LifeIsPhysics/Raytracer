@@ -1,0 +1,3 @@
+/mnt/c/Users/Berke/Documents/Raytracer/build/CMakeFiles/Raytracer.dir
+/mnt/c/Users/Berke/Documents/Raytracer/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Berke/Documents/Raytracer/build/CMakeFiles/rebuild_cache.dir
