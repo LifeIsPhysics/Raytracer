@@ -14,7 +14,7 @@ set(SRC_FILES
  "src/ray.h"
  "src/hittable.h"
  "src/sphere.h" 
- "src/hittable_list.h" "src/rtweekend.h")
+ "src/hittable_list.h" "src/rtweekend.h" "src/interval.h")
 
 
 # ------------------- COMPILER FLAGS -------------------
