@@ -40,6 +40,14 @@ public:
   double length_squared() const {
     return e[0] * e[0] + e[1] * e[1] + e[2] * e[2];
   }
+
+  static vec3 random() {
+    return vec3(random_double(), random_double(), random_double());
+  }
+
+  static vec3 random(double min, double max) {
+    return vec3(random_double(min, max), random_double(min, max), random_double(min, max));
+  }
 };
 
 // point3 is just an alias for vec3, but useful for geometric clarity in the code.
@@ -90,4 +98,24 @@ inline vec3 cross(const vec3& u, const vec3& v) {
 
 inline vec3 unit_vector(const vec3& v) {
   return v / v.length();
+}
+
+inline vec3 random_in_unit_sphere() {
+  while (true) {
+    auto v = vec3::random(-1.0, 1.0);
+    if (v.length() < 1) return v;
+  }
+}
+
+inline vec3 random_unit_vector() {
+  return unit_vector(random_in_unit_sphere());
+}
+
+inline vec3 random_on_hemisphere(const vec3& normal) {
+  auto on_unit_sphere = random_unit_vector();
+  auto dot_product = dot(on_unit_sphere, normal);
+
+  if (dot_product > 0) return  on_unit_sphere; // in the same hemisphere as the normal
+  else                 return -on_unit_sphere;
+
 }

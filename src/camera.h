@@ -69,7 +69,7 @@ private:
 		// Constructed a camera ray originating from the origin and directed at randomly sampled
 		// point around the pixel location (i,j)
 		auto offset = sample_square();
-		auto pixel_sample = _pixel00_loc + ((i + offset.x()) * _pixel_delta_u) 
+		auto pixel_sample = _pixel00_loc + ((i + offset.x()) * _pixel_delta_u)
 																		 + ((j + offset.y()) * _pixel_delta_v);
 
 		auto ray_origin = _center;
@@ -87,7 +87,8 @@ private:
 		hit_record rec;
 
 		if (world.hit(r, interval(0, inf), rec)) {
-			return 0.5 * (rec.normal + color(1, 1, 1));
+			vec3 direction = random_on_hemisphere(rec.normal);
+			return 0.5 * ray_color(ray(rec.p, direction), world);
 		}
 
 		vec3 unit_direction = unit_vector(r.direction());
