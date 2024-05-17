@@ -91,11 +91,11 @@ private:
 		hit_record rec;
 
 		if (world.hit(r, interval(0.001, inf), rec)) {
-			vec3 direction = random_on_hemisphere(rec.normal);
+			auto direction = rec.normal + random_unit_vector();
 			return 0.5 * ray_color(ray(rec.p, direction), depth-1, world);
 		}
 
-		vec3 unit_direction = unit_vector(r.direction());
+		auto unit_direction = unit_vector(r.direction());
 		auto a = 0.5 * (unit_direction.y() + 1.0);
 		return  (1.0 - a) * color(1.0, 1.0, 1.0) + a * color(0.5, 0.7, 1.0);
 	}
