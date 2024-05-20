@@ -26,3 +26,6 @@ visualize the image with image manipulation software, such as GIMP.
 
 # Example
 ![Rendered image](render.png)
+
+# Sources
+[_Ray Tracing in One Weekend_](https://raytracing.github.io/books/RayTracingInOneWeekend.html)
