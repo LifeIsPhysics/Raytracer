@@ -25,4 +25,4 @@ give them a material, and run the executable with the build command above. You c
 visualize the image with image manipulation software, such as GIMP.
 
 # Example
-![Rendered image](render.ppm)
+![Rendered image](render.png)
