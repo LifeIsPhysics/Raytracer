@@ -92,7 +92,7 @@ private:
   // the refractive index of the enclosing media
   double _refraction_index;
 
-  static reflactance(double cosine, double refraction_index) {
+  static double reflactance(double cosine, double refraction_index) {
     // Use Schlick's approximation for reflactance.
     auto r0 = (1 - refraction_index) / (1 + refraction_index);
     r0 = r0 * r0;
