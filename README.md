@@ -16,7 +16,7 @@ In Windows:
 ```bash
 cmake -B build
 cmake --build build --config release
-build\Raytracer.exe >> render.ppm
+build\Release\Raytracer.exe >> render.ppm
 ```
 
 # Usage
