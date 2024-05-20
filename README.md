@@ -27,5 +27,10 @@ visualize the image with image manipulation software, such as GIMP.
 # Example
 ![Rendered image](render.png)
 
+# Improvement ideas
+- Improve performance by offloading computation to the GPU with shader-programming (Run-time of authors machine ~1:30h)
+- Adding additional features (Motion blur, texture maps, perlin noise, rendering arbitrary meshes, light sources,
+ Volumetric rendering)
+
 # Sources
 [_Ray Tracing in One Weekend_](https://raytracing.github.io/books/RayTracingInOneWeekend.html)
